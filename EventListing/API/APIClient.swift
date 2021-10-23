@@ -24,7 +24,7 @@ class APIClient: APIClientProtocol {
     func request() -> Observable<[Event]> {
         let components = makeURLComponents()
         guard let url = components.url else {
-            return Observable.error(APIError.network(description: "urlCreationError"))
+            return Observable.error(APIError.network(description: String.Localizable.urlCreationError))
         }
         return Observable.create { observer -> Disposable in
             let task = self.session.dataTask(with: url) { data, _, _ in

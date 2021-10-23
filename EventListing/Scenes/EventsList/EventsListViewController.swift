@@ -3,12 +3,12 @@ import RxSwift
 import UIKit
 
 class EventsListViewController: UIViewController {
-    private let screen = EventsListView()
-    private let viewModel: EventsListViewModel?
+    let screen = EventsListView()
+    private let viewModel: EventsListViewModelProtocol?
     private let coordinator: EventsListCoordinator?
     private let disposeBag = DisposeBag()
 
-    init(viewModel: EventsListViewModel, coordinator: EventsListCoordinator) {
+    init(viewModel: EventsListViewModelProtocol, coordinator: EventsListCoordinator) {
         self.viewModel = viewModel
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
@@ -22,7 +22,7 @@ class EventsListViewController: UIViewController {
         super.viewDidLoad()
         view = screen
         setupNavigationBar()
-        viewModel?.getEvents(tableView: screen.tableView)
+        viewModel?.getEvents()
         bindViewModel()
         setupCellSelection()
     }
