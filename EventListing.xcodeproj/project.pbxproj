@@ -12,7 +12,6 @@
 		071C61492723A07600DAB7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071C61482723A07600DAB7C2 /* Assets.xcassets */; };
 		071C614C2723A07600DAB7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071C614A2723A07600DAB7C2 /* LaunchScreen.storyboard */; };
 		071C61612723A07600DAB7C2 /* EventListingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61602723A07600DAB7C2 /* EventListingUITests.swift */; };
-		071C61632723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */; };
 		072A5FCF2723BA4F0037E460 /* EventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FCE2723BA4F0037E460 /* EventsListViewModel.swift */; };
 		072A5FD12723D4B80037E460 /* EventsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FD02723D4B80037E460 /* EventsListTableViewCell.swift */; };
 		072A5FD52723D4E80037E460 /* MultilineLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FD42723D4E80037E460 /* MultilineLabel.swift */; };
@@ -74,7 +73,6 @@
 		071C61522723A07600DAB7C2 /* EventListingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventListingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071C615C2723A07600DAB7C2 /* EventListingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventListingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071C61602723A07600DAB7C2 /* EventListingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingUITests.swift; sourceTree = "<group>"; };
-		071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		072A5FCE2723BA4F0037E460 /* EventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewModel.swift; sourceTree = "<group>"; };
 		072A5FD02723D4B80037E460 /* EventsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListTableViewCell.swift; sourceTree = "<group>"; };
 		072A5FD42723D4E80037E460 /* MultilineLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineLabel.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				071C61602723A07600DAB7C2 /* EventListingUITests.swift */,
-				071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */,
 			);
 			path = EventListingUITests;
 			sourceTree = "<group>";
@@ -731,7 +728,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071C61632723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift in Sources */,
 				071C61612723A07600DAB7C2 /* EventListingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
