@@ -36,6 +36,8 @@
 		07C0AD99272424D50087B8F6 /* ErrorBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0AD98272424D50087B8F6 /* ErrorBannerView.swift */; };
 		07C0AD9C272428DE0087B8F6 /* NetworkConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0AD9B272428DE0087B8F6 /* NetworkConnectionManager.swift */; };
 		07C0AD9F272436960087B8F6 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0AD9E272436960087B8F6 /* UIImageView+Extensions.swift */; };
+		07C0ADA327243AA00087B8F6 /* Double+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0ADA227243AA00087B8F6 /* Double+ExtensionsTests.swift */; };
+		07C0ADA527243BF90087B8F6 /* Int+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0ADA427243BF90087B8F6 /* Int+ExtensionsTests.swift */; };
 		07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA52723A9DC002659B6 /* EventsListView.swift */; };
 		07FB3AA92723AABF002659B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA82723AABF002659B6 /* Coordinator.swift */; };
 		07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */; };
@@ -100,6 +102,8 @@
 		07C0AD98272424D50087B8F6 /* ErrorBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBannerView.swift; sourceTree = "<group>"; };
 		07C0AD9B272428DE0087B8F6 /* NetworkConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionManager.swift; sourceTree = "<group>"; };
 		07C0AD9E272436960087B8F6 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		07C0ADA227243AA00087B8F6 /* Double+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		07C0ADA427243BF90087B8F6 /* Int+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		07FB3AA52723A9DC002659B6 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		07FB3AA82723AABF002659B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -370,6 +374,8 @@
 		07C0AD9D272432030087B8F6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				07C0ADA227243AA00087B8F6 /* Double+ExtensionsTests.swift */,
+				07C0ADA427243BF90087B8F6 /* Int+ExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -764,6 +770,8 @@
 				072A600227240B6A0037E460 /* CoordinatorMock.swift in Sources */,
 				072A6008272410B50037E460 /* EventDetailViewControllerTests.swift in Sources */,
 				072A600A2724118D0037E460 /* EventsListViewModelTests.swift in Sources */,
+				07C0ADA527243BF90087B8F6 /* Int+ExtensionsTests.swift in Sources */,
+				07C0ADA327243AA00087B8F6 /* Double+ExtensionsTests.swift in Sources */,
 				072A5FFA272406E30037E460 /* EventFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
