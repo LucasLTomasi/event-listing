@@ -30,10 +30,10 @@ class EventsListView: UIView {
         networkConnectionBanner.bannerHeight = networkConnectionBanner.heightAnchor.constraint(equalToConstant: 0)
         networkConnectionBanner.bannerHeight?.isActive = true
         NSLayoutConstraint.activate([
-            networkConnectionBanner.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            networkConnectionBanner.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: contentSpacing),
             networkConnectionBanner.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             networkConnectionBanner.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            networkConnectionBanner.bottomAnchor.constraint(equalTo: tableView.topAnchor),
+            networkConnectionBanner.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: -contentSpacing),
             activityIndicator.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: contentSpacing),

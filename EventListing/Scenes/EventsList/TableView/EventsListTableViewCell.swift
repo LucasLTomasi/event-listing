@@ -15,6 +15,7 @@ class EventsListTableViewCell: UITableViewCell {
         buildViewHierarchy()
         setupConstraints()
         accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+        selectionStyle = .none
     }
 
     required init?(coder: NSCoder) {
