@@ -20,12 +20,30 @@ class EventsListViewController: UIViewController {
         super.viewDidLoad()
         view = screen
         viewModel?.getEvents(tableView: screen.tableView)
+        bindViewModel()
+        setupCellSelection()
+    }
+
+    private func bindViewModel() {
         viewModel?
             .events
             .bind(to: screen.tableView.rx.items(cellIdentifier: String(describing: EventsListTableViewCell.self),
                                                 cellType: EventsListTableViewCell.self)) { _, event, cell in
-                cell.eventTitleLabel.text = event.title
+                cell.viewModel = EventsListTableViewCellViewModel(title: event.title)
             }
+            .disposed(by: disposeBag)
+    }
+
+    private func setupCellSelection() {
+        screen.tableView
+            .rx
+            .itemSelected
+            .subscribe(
+                onNext: { [weak self] indexPath in
+                    let cell = self?.screen.tableView.cellForRow(at: indexPath) as? EventsListTableViewCell
+                    print(cell)
+                }
+            )
             .disposed(by: disposeBag)
     }
 }
