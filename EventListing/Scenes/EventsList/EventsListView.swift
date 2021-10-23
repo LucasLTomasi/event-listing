@@ -10,6 +10,7 @@ class EventsListView: UIView {
         return activityIndicator
     }()
 
+    private let networkConnectionBanner = ErrorBannerView()
     let tableView = TableView()
 
     override init(frame: CGRect = .zero) {
@@ -22,13 +23,19 @@ class EventsListView: UIView {
     private func buildViewHierarchy() {
         addSubview(tableView)
         addSubview(activityIndicator)
+        addSubview(networkConnectionBanner)
     }
 
     private func setupConstraints() {
+        networkConnectionBanner.bannerHeight = networkConnectionBanner.heightAnchor.constraint(equalToConstant: 0)
+        networkConnectionBanner.bannerHeight?.isActive = true
         NSLayoutConstraint.activate([
+            networkConnectionBanner.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            networkConnectionBanner.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            networkConnectionBanner.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            networkConnectionBanner.bottomAnchor.constraint(equalTo: tableView.topAnchor),
             activityIndicator.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: contentSpacing),
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: contentSpacing),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -contentSpacing),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -contentSpacing)
@@ -41,5 +48,12 @@ class EventsListView: UIView {
 
     func hideActivityIndicator() {
         activityIndicator.isHidden = true
+    }
+
+    func updateNetworkConnectionErrorVisibility(shouldHide: Bool) {
+        print("should hide \(shouldHide)")
+        networkConnectionBanner.update(shouldHide: shouldHide) {
+            self.layoutIfNeeded()
+        }
     }
 }

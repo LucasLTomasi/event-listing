@@ -22,9 +22,10 @@ class EventsListViewController: UIViewController {
         super.viewDidLoad()
         view = screen
         setupNavigationBar()
-        viewModel?.getEvents()
         bindViewModel()
         setupCellSelection()
+        observeNetworkConnectivity()
+        viewModel?.getEvents()
     }
 
     private func setupNavigationBar() {
@@ -56,6 +57,15 @@ class EventsListViewController: UIViewController {
                     self?.coordinator?.pushEventDetail(eventViewModel: cellViewModel, navigationController: self?.navigationController)
                 }
             )
+            .disposed(by: disposeBag)
+    }
+
+    private func observeNetworkConnectivity() {
+        viewModel?
+            .isNetworkConnectionAvailable
+            .subscribe(onNext: { [weak self] isAvailable in
+                self?.screen.updateNetworkConnectionErrorVisibility(shouldHide: isAvailable)
+            })
             .disposed(by: disposeBag)
     }
 }
