@@ -51,7 +51,6 @@ class EventsListView: UIView {
     }
 
     func updateNetworkConnectionErrorVisibility(shouldHide: Bool) {
-        print("should hide \(shouldHide)")
         networkConnectionBanner.update(shouldHide: shouldHide) {
             self.layoutIfNeeded()
         }
