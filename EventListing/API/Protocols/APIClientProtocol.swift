@@ -1,3 +1,5 @@
+import RxSwift
+
 protocol APIClientProtocol {
-    func request()
+    func request() -> Observable<[Event]>
 }

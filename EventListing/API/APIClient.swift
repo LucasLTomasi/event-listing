@@ -1,4 +1,5 @@
 import Foundation
+import RxSwift
 
 class APIClient: APIClientProtocol {
     static let shared = APIClient()
@@ -20,5 +21,24 @@ class APIClient: APIClientProtocol {
         return components
     }
 
-    func request() {}
+    func request() -> Observable<[Event]> {
+        let components = makeURLComponents()
+        guard let url = components.url else {
+            return Observable.error(APIError.network(description: "urlCreationError"))
+        }
+        return Observable.create { observer -> Disposable in
+            let task = self.session.dataTask(with: url) { data, _, _ in
+                APIDecoder.decode(data) { result in
+                    switch result {
+                    case .success(let events):
+                        observer.onNext(events)
+                    case .failure(let error):
+                        observer.onError(error)
+                    }
+                }
+            }
+            task.resume()
+            return Disposables.create(with: task.cancel)
+        }
+    }
 }

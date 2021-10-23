@@ -1,15 +1,18 @@
-import Combine
 import Foundation
 
 enum APIDecoder {
-    static func decode<T: Decodable>(_ data: Data) -> AnyPublisher<T, APIError> {
+    static func decode(_ data: Data?, completion: @escaping (Result<[Event], APIError>) -> Void) {
+        guard let data = data else {
+            completion(.failure(.decoding(description: "nullDataError")))
+            return
+        }
         let decoder = JSONDecoder()
-
-        return Just(data)
-            .decode(type: T.self, decoder: decoder)
-            .mapError { error in
-                .decoding(description: error.localizedDescription)
-            }
-            .eraseToAnyPublisher()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        do {
+            let response = try decoder.decode([Event].self, from: data)
+            completion(.success(response))
+        } catch {
+            completion(.failure(.decoding(description: "decodingError")))
+        }
     }
 }
