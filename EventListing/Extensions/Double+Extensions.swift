@@ -1,5 +1,5 @@
 extension Double {
     func formattedAsPrice() -> String {
-        return "R$ " + String(self)
+        return "R$ " + String(format: "%.2f", self)
     }
 }
