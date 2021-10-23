@@ -2,18 +2,18 @@ import RxSwift
 
 class EventsListViewModel {
     private let apiClient: APIClientProtocol
-    private let events: PublishSubject<[Event]> = PublishSubject()
+    let events: PublishSubject<[Event]> = PublishSubject()
     private let disposeBag = DisposeBag()
 
     init(apiClient: APIClientProtocol = APIClient.shared) {
         self.apiClient = apiClient
     }
 
-    func getEvents() {
+    func getEvents(tableView: UITableView) {
         apiClient
             .request()
             .subscribe(onNext: { response in
-                print(response)
+                self.events.onNext(response)
             }, onError: { response in
                 print(response)
             })
