@@ -21,9 +21,17 @@ class EventsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = screen
+        setupNavigationBar()
         viewModel?.getEvents(tableView: screen.tableView)
         bindViewModel()
         setupCellSelection()
+    }
+
+    private func setupNavigationBar() {
+        title = String.Localizable.eventsListViewTitle
+        let backItem = UIBarButtonItem()
+        backItem.title = String.Localizable.eventsListBackButtonText
+        navigationItem.backBarButtonItem = backItem
     }
 
     private func bindViewModel() {
@@ -31,6 +39,7 @@ class EventsListViewController: UIViewController {
             .events
             .bind(to: screen.tableView.rx.items(cellIdentifier: String(describing: EventsListTableViewCell.self),
                                                 cellType: EventsListTableViewCell.self)) { _, event, cell in
+                self.screen.hideActivityIndicator()
                 cell.viewModel = EventViewModel(event: event)
             }
             .disposed(by: disposeBag)

@@ -1,0 +1,14 @@
+// Errors
+"url_creation_error" = "Erro na criação de URL";
+"null_data_error" = "Dados de response são nulos";
+"decoding_error" = "Erro na decodificação do payload.";
+"generic_api_error" = "Ocorreu algum problema\nPor favor tente novamente";
+"no_internet_connection" = "Sem conexão com a internet!";
+
+// Events List View
+"events_list_view_title" = "Listagem de Eventos";
+"events_list_view_loading" = "Carregando...";
+"events_list_back_button_text" = "Voltar";
+
+// Event Detail View
+"event_detail_view_title" = "Detalhes";

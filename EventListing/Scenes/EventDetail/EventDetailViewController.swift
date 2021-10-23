@@ -16,5 +16,6 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = screen
+        title = String.Localizable.eventDetailViewTitle
     }
 }

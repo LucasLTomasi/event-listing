@@ -22,6 +22,8 @@
 		072A5FDD2723DB2B0037E460 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FDC2723DB2B0037E460 /* EventDetailViewController.swift */; };
 		072A5FE12723DB490037E460 /* EventsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FE02723DB490037E460 /* EventsListCoordinator.swift */; };
 		072A5FE32723DEE70037E460 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FE22723DEE70037E460 /* EventViewModel.swift */; };
+		072A5FE72723ECC10037E460 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 072A5FE62723ECC10037E460 /* Localizable.strings */; };
+		072A5FEC2723ED2C0037E460 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FEB2723ED2C0037E460 /* String+Extensions.swift */; };
 		07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA52723A9DC002659B6 /* EventsListView.swift */; };
 		07FB3AA92723AABF002659B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA82723AABF002659B6 /* Coordinator.swift */; };
 		07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */; };
@@ -72,6 +74,8 @@
 		072A5FDC2723DB2B0037E460 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		072A5FE02723DB490037E460 /* EventsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListCoordinator.swift; sourceTree = "<group>"; };
 		072A5FE22723DEE70037E460 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		072A5FE62723ECC10037E460 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		072A5FEB2723ED2C0037E460 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		07FB3AA52723A9DC002659B6 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		07FB3AA82723AABF002659B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			children = (
 				07FB3AAD2723AC3C002659B6 /* API */,
 				072A5FD22723D4CD0037E460 /* Components */,
+				072A5FE82723ECE40037E460 /* Extensions */,
 				07FB3AB72723ACCB002659B6 /* Models */,
 				07FB3AA72723AAAF002659B6 /* Navigation */,
 				07FB3AA32723A984002659B6 /* Scenes */,
@@ -221,6 +226,14 @@
 			path = CommonViewModels;
 			sourceTree = "<group>";
 		};
+		072A5FE82723ECE40037E460 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				072A5FEB2723ED2C0037E460 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		07FB3AA32723A984002659B6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +272,7 @@
 				071C613F2723A07200DAB7C2 /* AppDelegate.swift */,
 				071C61482723A07600DAB7C2 /* Assets.xcassets */,
 				071C614A2723A07600DAB7C2 /* LaunchScreen.storyboard */,
+				072A5FE62723ECC10037E460 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -424,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				071C614C2723A07600DAB7C2 /* LaunchScreen.storyboard in Resources */,
+				072A5FE72723ECC10037E460 /* Localizable.strings in Resources */,
 				071C61492723A07600DAB7C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +598,7 @@
 				071C61402723A07200DAB7C2 /* AppDelegate.swift in Sources */,
 				07FB3AB22723AC65002659B6 /* APIClientProtocol.swift in Sources */,
 				072A5FCF2723BA4F0037E460 /* EventsListViewModel.swift in Sources */,
+				072A5FEC2723ED2C0037E460 /* String+Extensions.swift in Sources */,
 				072A5FDB2723DB1E0037E460 /* EventDetailView.swift in Sources */,
 				072A5FD52723D4E80037E460 /* MultilineLabel.swift in Sources */,
 				07FB3AAF2723AC46002659B6 /* APIClient.swift in Sources */,
