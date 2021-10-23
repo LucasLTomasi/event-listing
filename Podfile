@@ -6,6 +6,7 @@ target 'EventListing' do
 
   pod 'RxSwift', '~> 6'
   pod 'RxCocoa', '~> 6'
+  pod 'SwiftLint'
 
   target 'EventListingTests' do
     inherit! :search_paths
