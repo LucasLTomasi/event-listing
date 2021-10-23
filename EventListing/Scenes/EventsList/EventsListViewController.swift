@@ -5,10 +5,12 @@ import UIKit
 class EventsListViewController: UIViewController {
     private let screen = EventsListView()
     private let viewModel: EventsListViewModel?
+    private let coordinator: EventsListCoordinator?
     private let disposeBag = DisposeBag()
 
-    init(viewModel: EventsListViewModel) {
+    init(viewModel: EventsListViewModel, coordinator: EventsListCoordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -29,7 +31,7 @@ class EventsListViewController: UIViewController {
             .events
             .bind(to: screen.tableView.rx.items(cellIdentifier: String(describing: EventsListTableViewCell.self),
                                                 cellType: EventsListTableViewCell.self)) { _, event, cell in
-                cell.viewModel = EventsListTableViewCellViewModel(title: event.title)
+                cell.viewModel = EventViewModel(event: event)
             }
             .disposed(by: disposeBag)
     }
@@ -40,8 +42,9 @@ class EventsListViewController: UIViewController {
             .itemSelected
             .subscribe(
                 onNext: { [weak self] indexPath in
-                    let cell = self?.screen.tableView.cellForRow(at: indexPath) as? EventsListTableViewCell
-                    print(cell)
+                    guard let cell = self?.screen.tableView.cellForRow(at: indexPath) as? EventsListTableViewCell,
+                          let cellViewModel = cell.viewModel else { return }
+                    self?.coordinator?.pushEventDetail(eventViewModel: cellViewModel, navigationController: self?.navigationController)
                 }
             )
             .disposed(by: disposeBag)

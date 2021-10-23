@@ -4,7 +4,7 @@ class EventsListTableViewCell: UITableViewCell {
     private let contentSpacing: CGFloat = 12
     private let eventTitleLabel = MultilineLabel()
 
-    var viewModel: EventsListTableViewCellViewModel? {
+    var viewModel: EventViewModel? {
         didSet {
             updateCellContent()
         }

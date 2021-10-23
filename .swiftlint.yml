@@ -1,6 +1,10 @@
 excluded:
   - Pods
 
+force_cast: error
+
+line_length: 150
+
 identifier_name:
   excluded:
     - id

@@ -1,5 +1,11 @@
 enum ViewControllerFactory {
-    static func makeEventsListViewController() -> EventsListViewController {
-        return EventsListViewController(viewModel: EventsListViewModel())
+    static func makeEventsListViewController(coordinator: EventsListCoordinator) -> EventsListViewController {
+        let viewModel = EventsListViewModel()
+        let viewController = EventsListViewController(viewModel: viewModel, coordinator: coordinator)
+        return viewController
+    }
+
+    static func makeEventDetailViewController(eventViewModel: EventViewModel) -> EventDetailViewController {
+        EventDetailViewController(viewModel: eventViewModel)
     }
 }
