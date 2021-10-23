@@ -16,5 +16,10 @@ extension String {
 
         // Event Detail View
         static let eventDetailViewTitle = NSLocalizedString("event_detail_view_title", comment: "")
+        static let eventDetailViewEventDate = NSLocalizedString("event_detail_view_event_date", comment: "")
+        static let eventDetailViewEventDateTimeIndicator = NSLocalizedString("event_detail_view_event_date_time_indicator", comment: "")
+        static let eventDetailViewEventDescription = NSLocalizedString("event_detail_view_event_description", comment: "")
+        static let eventDetailViewEventPrice = NSLocalizedString("event_detail_view_event_price", comment: "")
+        static let eventDetailViewEventTitle = NSLocalizedString("event_detail_view_event_title", comment: "")
     }
 }

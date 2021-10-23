@@ -1,10 +1,11 @@
 import UIKit
 
 class EventDetailViewController: UIViewController {
-    private let screen = EventDetailView()
+    private let screen: EventDetailView?
     private let viewModel: EventViewModel?
 
     init(viewModel: EventViewModel) {
+        screen = EventDetailView(viewModel: viewModel)
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

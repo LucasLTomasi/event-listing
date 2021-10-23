@@ -24,6 +24,9 @@
 		072A5FE32723DEE70037E460 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FE22723DEE70037E460 /* EventViewModel.swift */; };
 		072A5FE72723ECC10037E460 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 072A5FE62723ECC10037E460 /* Localizable.strings */; };
 		072A5FEC2723ED2C0037E460 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FEB2723ED2C0037E460 /* String+Extensions.swift */; };
+		072A5FEE2723F2A60037E460 /* TitleAndContentStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FED2723F2A60037E460 /* TitleAndContentStackView.swift */; };
+		072A5FF02723FC5E0037E460 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FEF2723FC5E0037E460 /* Double+Extensions.swift */; };
+		072A5FF22723FE3F0037E460 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A5FF12723FE3F0037E460 /* Int+Extensions.swift */; };
 		07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA52723A9DC002659B6 /* EventsListView.swift */; };
 		07FB3AA92723AABF002659B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA82723AABF002659B6 /* Coordinator.swift */; };
 		07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */; };
@@ -76,6 +79,9 @@
 		072A5FE22723DEE70037E460 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		072A5FE62723ECC10037E460 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		072A5FEB2723ED2C0037E460 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		072A5FED2723F2A60037E460 /* TitleAndContentStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndContentStackView.swift; sourceTree = "<group>"; };
+		072A5FEF2723FC5E0037E460 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		072A5FF12723FE3F0037E460 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		07FB3AA52723A9DC002659B6 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
 		07FB3AA82723AABF002659B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				072A5FD42723D4E80037E460 /* MultilineLabel.swift */,
+				072A5FED2723F2A60037E460 /* TitleAndContentStackView.swift */,
 			);
 			path = Labels;
 			sourceTree = "<group>";
@@ -229,6 +236,8 @@
 		072A5FE82723ECE40037E460 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				072A5FEF2723FC5E0037E460 /* Double+Extensions.swift */,
+				072A5FF12723FE3F0037E460 /* Int+Extensions.swift */,
 				072A5FEB2723ED2C0037E460 /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -592,13 +601,16 @@
 				072A5FD82723D63D0037E460 /* TableView.swift in Sources */,
 				07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */,
 				07FB3AB92723ADD3002659B6 /* APIError.swift in Sources */,
+				072A5FF22723FE3F0037E460 /* Int+Extensions.swift in Sources */,
 				072A5FE32723DEE70037E460 /* EventViewModel.swift in Sources */,
 				071C61442723A07200DAB7C2 /* EventsListViewController.swift in Sources */,
+				072A5FF02723FC5E0037E460 /* Double+Extensions.swift in Sources */,
 				07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */,
 				071C61402723A07200DAB7C2 /* AppDelegate.swift in Sources */,
 				07FB3AB22723AC65002659B6 /* APIClientProtocol.swift in Sources */,
 				072A5FCF2723BA4F0037E460 /* EventsListViewModel.swift in Sources */,
 				072A5FEC2723ED2C0037E460 /* String+Extensions.swift in Sources */,
+				072A5FEE2723F2A60037E460 /* TitleAndContentStackView.swift in Sources */,
 				072A5FDB2723DB1E0037E460 /* EventDetailView.swift in Sources */,
 				072A5FD52723D4E80037E460 /* MultilineLabel.swift in Sources */,
 				07FB3AAF2723AC46002659B6 /* APIClient.swift in Sources */,

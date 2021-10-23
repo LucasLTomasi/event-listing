@@ -12,3 +12,9 @@
 
 // Event Detail View
 "event_detail_view_title" = "Detalhes";
+"event_detail_view_event_date" = "Data:";
+"event_detail_view_event_date_time_indicator" = "às";
+"event_detail_view_event_description" = "Descrição:";
+"event_detail_view_event_price" = "Preço:";
+"event_detail_view_event_title" = "Título:";
+
