@@ -38,6 +38,7 @@ class EventsListViewController: UIViewController {
     private func bindViewModel() {
         viewModel?
             .events
+            .catchAndReturn([])
             .bind(to: screen.tableView.rx.items(cellIdentifier: String(describing: EventsListTableViewCell.self),
                                                 cellType: EventsListTableViewCell.self)) { _, event, cell in
                 self.screen.hideActivityIndicator()

@@ -25,10 +25,12 @@ class EventsListViewModel: EventsListViewModelProtocol {
     func getEvents() {
         apiClient
             .request()
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { response in
                 self.events.onNext(response)
             }, onError: { error in
                 print(error)
+                self.events.onError(error)
             })
             .disposed(by: disposeBag)
     }
