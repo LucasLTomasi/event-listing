@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		071C61402723A07200DAB7C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C613F2723A07200DAB7C2 /* AppDelegate.swift */; };
-		071C61442723A07200DAB7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61432723A07200DAB7C2 /* ViewController.swift */; };
+		071C61442723A07200DAB7C2 /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61432723A07200DAB7C2 /* EventsListViewController.swift */; };
 		071C61492723A07600DAB7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071C61482723A07600DAB7C2 /* Assets.xcassets */; };
 		071C614C2723A07600DAB7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071C614A2723A07600DAB7C2 /* LaunchScreen.storyboard */; };
 		071C61572723A07600DAB7C2 /* EventListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61562723A07600DAB7C2 /* EventListingTests.swift */; };
 		071C61612723A07600DAB7C2 /* EventListingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61602723A07600DAB7C2 /* EventListingUITests.swift */; };
 		071C61632723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */; };
+		07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA52723A9DC002659B6 /* EventsListView.swift */; };
+		07FB3AA92723AABF002659B6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AA82723AABF002659B6 /* Coordinator.swift */; };
+		07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		071C613C2723A07200DAB7C2 /* EventListing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventListing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071C613F2723A07200DAB7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		071C61432723A07200DAB7C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		071C61432723A07200DAB7C2 /* EventsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		071C61482723A07600DAB7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		071C614B2723A07600DAB7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		071C614D2723A07600DAB7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +48,9 @@
 		071C615C2723A07600DAB7C2 /* EventListingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventListingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071C61602723A07600DAB7C2 /* EventListingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingUITests.swift; sourceTree = "<group>"; };
 		071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07FB3AA52723A9DC002659B6 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
+		07FB3AA82723AABF002659B6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,9 @@
 		071C613E2723A07200DAB7C2 /* EventListing */ = {
 			isa = PBXGroup;
 			children = (
+				07FB3AA72723AAAF002659B6 /* Navigation */,
+				07FB3AA32723A984002659B6 /* Scenes */,
 				071C613F2723A07200DAB7C2 /* AppDelegate.swift */,
-				071C61432723A07200DAB7C2 /* ViewController.swift */,
 				071C61482723A07600DAB7C2 /* Assets.xcassets */,
 				071C614A2723A07600DAB7C2 /* LaunchScreen.storyboard */,
 				071C614D2723A07600DAB7C2 /* Info.plist */,
@@ -119,6 +126,32 @@
 				071C61622723A07600DAB7C2 /* EventListingUITestsLaunchTests.swift */,
 			);
 			path = EventListingUITests;
+			sourceTree = "<group>";
+		};
+		07FB3AA32723A984002659B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				07FB3AA42723A98C002659B6 /* EventsList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		07FB3AA42723A98C002659B6 /* EventsList */ = {
+			isa = PBXGroup;
+			children = (
+				07FB3AA52723A9DC002659B6 /* EventsListView.swift */,
+				071C61432723A07200DAB7C2 /* EventsListViewController.swift */,
+			);
+			path = EventsList;
+			sourceTree = "<group>";
+		};
+		07FB3AA72723AAAF002659B6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				07FB3AA82723AABF002659B6 /* Coordinator.swift */,
+				07FB3AAA2723AB27002659B6 /* ViewControllerFactory.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071C61442723A07200DAB7C2 /* ViewController.swift in Sources */,
+				07FB3AA92723AABF002659B6 /* Coordinator.swift in Sources */,
+				07FB3AAB2723AB27002659B6 /* ViewControllerFactory.swift in Sources */,
+				071C61442723A07200DAB7C2 /* EventsListViewController.swift in Sources */,
+				07FB3AA62723A9DC002659B6 /* EventsListView.swift in Sources */,
 				071C61402723A07200DAB7C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
